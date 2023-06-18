@@ -8,5 +8,6 @@ auth_service = AuthService()
 @router.post("login")
 async def login(request: Request):
     data = await request.json()
+    return data
 
 
