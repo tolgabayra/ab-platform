@@ -3,9 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from database import engine
 from model import Base
 from controller.auth_controller import router
+from dotenv import load_dotenv
+
 
 app = FastAPI()
-
+load_dotenv()
 
 app.add_middleware(
     CORSMiddleware,
@@ -26,4 +28,5 @@ app.include_router(router, prefix="/api/v1/auth ", tags=["auth"])
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, port=5000)
