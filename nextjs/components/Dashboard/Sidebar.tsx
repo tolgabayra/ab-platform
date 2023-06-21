@@ -37,16 +37,17 @@ const Sidebar = (props: any) => {
           }}
         >
           {Menuitems.map((item, index) => {
-            //{/********SubHeader**********/}
-
             return (
               <List component="li" disablePadding key={item.title}>
                 <ListItem
                   onClick={() => handleClick(index)}
                   button
+                  component={Link}
+                  href={item.href}
                 >
                   <ListItemIcon
                     sx={{
+
                     }}
                   >
                     <item.icon width="20" height="20" />
@@ -89,7 +90,7 @@ const Sidebar = (props: any) => {
       }}
       variant="temporary"
     >
-      
+
       {SidebarContent}
     </Drawer>
   );

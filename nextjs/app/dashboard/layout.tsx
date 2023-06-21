@@ -31,10 +31,14 @@ const PageWrapper = experimentalStyled("div")(({ theme }) => ({
   },
 }));
 
-const FullLayout = () => {
-  //
+export default function DashboardLayout({
+  children, // will be a page or nested layout
+}: {
+  children: React.ReactNode
+}) {  //
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
   return (
     <MainWrapper>
       <Header
@@ -57,11 +61,11 @@ const FullLayout = () => {
           maxWidth={false}
           sx={{
             paddingTop: "20px",
-            paddingLeft: ""
+            paddingLeft: isSidebarOpen && lgUp ? "280px!important" : "",
           }}
         >
           <Box sx={{ minHeight: "calc(100vh - 170px)" }}>
-            
+            {children}
           </Box>
           <Footer />
         </Container>
@@ -70,4 +74,3 @@ const FullLayout = () => {
   );
 };
 
-export default FullLayout;

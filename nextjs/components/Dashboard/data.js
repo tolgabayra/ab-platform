@@ -12,12 +12,12 @@ const Menuitems = [
   {
     title: "Dashboard",
     icon: DashboardOutlinedIcon,
-    href: "/dashboards/dashboard1",
+    href: "/deneme",
   },
   {
     title: "Autocomplete",
     icon: AddToPhotosOutlinedIcon,
-    href: "/form-elements/autocomplete",
+    href: "dashboard/settings",
   }
 ];
 
