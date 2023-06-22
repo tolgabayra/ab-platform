@@ -13,5 +13,3 @@ async def login(user: LoginUser, response: Response):
     data = auth_service.login(email=user.email, password=user.password)
     if data is None:
         raise HTTPException(status_code=404, detail="Invalid email or password")
-    
-    response.set_cookie(key="access_token": )
