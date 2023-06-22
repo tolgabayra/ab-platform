@@ -13,6 +13,6 @@ app.use(morgan('dev'));
 app.get('/', (req: Request, res: Response) => {
   res.send('deneme');
 });
-app.listen(5000, () => {
-  console.log(`[server]: Server is running at http://localhost:${5000}`);
+app.listen(1234, () => {
+  console.log(`[server]: Server is running at http://localhost:${1234}`);
 });
