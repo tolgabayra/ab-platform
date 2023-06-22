@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./dist/app.js",
-    "dev": "nodemon ./dist/src/app.js",
+    "dev": "npx tsc && nodemon ./dist/src/app.js",
     "deneme": "npx ts-node ./src/app.ts",
     "build": "npx tsc"
   },
