@@ -38,7 +38,8 @@ export default function DashboardLayout({
 }) {  //
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+  // @ts-ignore
+    const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
   return (
     <MainWrapper>
       <Header
